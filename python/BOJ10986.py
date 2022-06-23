@@ -13,3 +13,5 @@ for i in range(div):
 print(int(res))
 
 # 나머지 리스트를 만들고 각 인덱스에 Combination 연산을 사용하는 것이 제일 중요한 사고였다
+
+# https://www.acmicpc.net/problem/10986
