@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int n, k, res = 0;
+    cin >> n >> k;
+    while (n != 1)
+    {
+        if (n >= k) {           // case1
+            res += n % k + 1;   // 
+            n /= k;
+        }
+        else                    // case2
+        {
+            res += n - 1;
+            break;
+        }
+    }
+    cout << res;
+}
