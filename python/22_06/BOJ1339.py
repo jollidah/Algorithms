@@ -28,3 +28,5 @@ while not pq.empty():
     res += cnt * -dataIdx       # cnt를 이용해 9부터 점점 작은 숫자를 곱하게 된다
     cnt -= 1
 print(res)
+
+# https://www.acmicpc.net/problem/1339
