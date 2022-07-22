@@ -33,3 +33,4 @@ elif ccw(x3, y3, x4, y4, x2, y2) == 0 and min(x3, x4) <= x2 <= max(x3, x4) and m
 else:
     print(0)
 # https://www.acmicpc.net/problem/17387
+ 
