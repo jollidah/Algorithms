@@ -1,0 +1,26 @@
+class Solution:
+    def divide(self, dividend: int, divisor: int) -> int:
+        abs_dividend = abs(dividend)    # 연산에 사용할 절댓값
+        abs_divisor = abs(divisor)
+        res = 0
+        tmp = abs_divisor           # 실질적으로 쉬프트하며 이동할 수
+        tmpCnt = 1                  # 쉬프트한 횟수를 이용하여 저장할 배수
+        while abs_dividend >= tmp:  # tmp가 처음으로 dividend보다 커질 때까지 shiftLeft(sl)
+            tmp <<= 1               
+            tmpCnt *= 2
+        tmp >>= 1                   # tmp가 더 커졌으니 한 번 sr
+        tmpCnt //= 2
+        abs_dividend -= tmp
+        res += tmpCnt               # dividend에서 tmp값을 뺀 후 res에 tmpCnt 더함
+        while abs_divisor <= tmp:   # tmp가 divisor보다 작아질 때까지 반복
+            while abs_dividend < tmp:   # tmp가 dividend보다 작아질 때까지 sl
+                tmp >>= 1
+                tmpCnt //= 2
+            abs_dividend -= tmp            
+            res += tmpCnt
+        if (dividend < 0 and divisor < 0) or (dividend > 0 and divisor > 0):
+            return min(res, 2 ** 31 - 1)    # 최댓값 지정
+        else:
+            return -min(res, 2 ** 31)       # 최솟값 지정
+            
+       # https://leetcode.com/problems/divide-two-integers/
