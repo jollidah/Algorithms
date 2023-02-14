@@ -1,1 +1,2 @@
-##Studying algorithm
+## Studying algorithm
+Solve at least one problem per day
