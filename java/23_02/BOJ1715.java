@@ -4,14 +4,6 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-//
-//    public static int dfs(ArrayList<Integer> gv, ArrayList<Integer> iv, int cnt) {
-//        if (gv.isEmpty()) {
-//            return cnt;
-//        } else {
-//            for(int )
-//        }
-//    }
 
     public static void main(String[] args) {
         try {
