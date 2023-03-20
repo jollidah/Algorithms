@@ -26,4 +26,4 @@ class Solution:
         pos.next = None
         return head
 
-# 
+# https://leetcode.com/problems/rotate-list/description/
