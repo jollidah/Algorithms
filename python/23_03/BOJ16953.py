@@ -17,4 +17,4 @@ if a == b:
 else:
     print(-1)
 
-# https://www.acmicpc.net/problem/16953
+# https://www.acmicpc.net/submit/16953
