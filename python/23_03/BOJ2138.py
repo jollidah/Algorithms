@@ -28,7 +28,11 @@ while(ptr < len(s1) - 1):
 if s1[-2] == ans[-1]:
     res = min(res, cnt)
 
+<<<<<<< HEAD
 # 두 번째 스위치 누른
+=======
+# 첫 번째 스위치를 누르지 않은 경우
+>>>>>>> ad513d3a853dbdb214beb1cd3816a8b8e8fdea49
 cnt = 0
 ptr = 2
 while(ptr < len(s2) - 1):
