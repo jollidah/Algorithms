@@ -24,8 +24,6 @@ while not pq.empty():
         dp[p] = c
         for edge, cost in edges[p].items():
             pq.put([c + cost, edge])
-    # print(c, p)
-
 
 for n in dp[1:]:
     print(n if n != -1 else "INF")
