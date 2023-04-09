@@ -2,7 +2,6 @@
 
 import sys
 
-
 def getParent(a) -> int:
         while a != p[a]:
             a = p[a]

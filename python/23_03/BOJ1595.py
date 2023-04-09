@@ -1,5 +1,6 @@
+# 북쪽나라의 도로
+
 import sys
-from queue import PriorityQueue
 from collections import deque
 
 input = sys.stdin.readline
@@ -34,3 +35,5 @@ while True:
     except:
         break
 print(BFS(BFS(1)[0])[1])
+
+# https://www.acmicpc.net/problem/1595
