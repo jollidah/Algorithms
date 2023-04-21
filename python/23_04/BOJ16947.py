@@ -14,17 +14,18 @@ cycle = set()
 
 def DFS(ex, i):
     if visit[i]:
-        for t in range(len(tmp)):
-            if tmp[t] == i:
-                for j in tmp[t:]:
+        for t in range(len(path)):
+            if path[t] == i:
+                for j in path[t:]:
                     cycle.add(j)
     else:
         visit[i] = True
-        tmp.append(i)
+        path.append(i)
         for child in childs[i]:
             if child != ex:
                 DFS(i, child)
-        tmp.pop()
+        # pop을 안 해서 고생했다 pop 잊지 말자
+        path.pop()
 
 # 그래프 업데이트
 for _ in range(n):
@@ -35,7 +36,7 @@ for _ in range(n):
 # Cycle detection
 for i in range(1, n + 1):
     if not visit[i]:
-        tmp = []
+        path = []
         DFS(0, i)
 
 visit = [False for _ in range(n + 1)]
