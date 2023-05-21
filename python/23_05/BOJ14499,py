@@ -1,0 +1,60 @@
+# 주사위 굴리기
+
+import sys
+
+# dice
+#   1
+# 3 0 2
+#   4
+#   5
+def rollEast(y, x):
+    if x == m - 1:
+        return y, x, False
+    x += 1
+    dice[5], dice[3] , dice[0], dice[2] = dice[2], dice[5], dice[3], dice[0]
+    return y, x, True
+
+def rollWest(y, x):
+    if x == 0:
+        return y, x, False
+    x -= 1
+    dice[5], dice[3] , dice[0], dice[2] = dice[3], dice[0], dice[2], dice[5]
+    return y, x, True
+
+def rollSouth(y, x):
+    if y == n - 1:
+        return y, x, False
+    y += 1
+    dice[5], dice[1] , dice[0], dice[4] = dice[4], dice[5], dice[1], dice[0]
+    return y, x, True
+
+def rollNorth(y, x):
+    if y == 0:
+        return y, x, False
+    y -= 1
+    dice[5], dice[1] , dice[0], dice[4] = dice[1], dice[0], dice[4], dice[5]
+    return y, x, True
+
+inp = sys.stdin.readline
+n, m, y, x, k = map(int, inp().split())
+dice = [0 for _ in range(6)]
+grid = [list(map(int , inp().split())) for _ in range(n)]
+
+for d in list(map(int, inp().split())):
+    roll = False
+    if d == 1:
+        y, x, roll = rollEast(y, x)
+    elif d == 2:
+        y, x, roll = rollWest(y, x)
+    elif d == 3:
+        y, x, roll = rollNorth(y, x)
+    else:
+        y, x, roll = rollSouth(y, x)
+    if roll:
+        if grid[y][x] == 0:
+            grid[y][x] = dice[5]
+        else:
+            dice[5], grid[y][x] = grid[y][x], 0
+        print(dice[0])
+    
+# https://www.acmicpc.net/problem/14499
