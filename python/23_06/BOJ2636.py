@@ -31,7 +31,6 @@ def update_oxidize():
 inp = sys.stdin.readline
 cnt = -1
 oxidize_cheeses = [[0, 0]]
-cheese = []
 n, m  = map(int, inp().split())
 dy = [-1, 0, 1, 0]
 dx = [0, 1, 0, -1]
