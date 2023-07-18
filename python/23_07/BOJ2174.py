@@ -9,19 +9,12 @@ dx = (0, 1, 0, -1)
 a, b = map(int, inp().split())
 n, m = map(int, inp().split())
 pos = dict()
-
+direction = {"S": 0, "E": 1, "N": 2, "W": 3}
 robots = [[]]
 for num in range(1, n + 1):
-    dir = 0
     x, y, d = inp().split()
     y, x = int(y), int(x)
-    if d == "E":
-        dir = 1
-    elif d == "N":
-        dir = 2
-    elif d == "W":
-        dir = 3
-    robots.append([int(y), int(x), dir])
+    robots.append([int(y), int(x), direction[d]])
     pos[(y, x)] = num
 
 for _ in range(m):
@@ -34,7 +27,7 @@ for _ in range(m):
             for _ in range(time):
                 y += dy[d]
                 if (y, x) in pos:
-                    print("Robot %d crashes into robot %d" %(idx, pos[(y, x)]))
+                    print("Robot %d crashes into robot %d" %((idx), pos[(y, x)]))
                     exit(0)
                 if b + 1 == y or y == 0:
                     print("Robot %d crashes into the wall" %idx)
