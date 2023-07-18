@@ -14,7 +14,7 @@ robots = [[]]
 for num in range(1, n + 1):
     dir = 0
     x, y, d = inp().split()
-    y, x = int(y), int(x)6
+    y, x = int(y), int(x)
     if d == "E":
         dir = 1
     elif d == "N":
