@@ -16,7 +16,7 @@ def Solution():
     for i in range(n):
         for t in range(i + 1, n + 1):
             if (tmp := aList[t] - aList[i]) in aDict:
-                aDict[tmp] += 1
+                aDict[tmp] += 1 # 갯수
             else:
                 aDict[tmp] = 1
     del(aList)
