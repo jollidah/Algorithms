@@ -1,6 +1,7 @@
+# 숫자 재배치
+
 from itertools import permutations
 import sys
-
 
 def Solultion():
     inp = sys.stdin.readline
@@ -17,3 +18,5 @@ def Solultion():
 
 if __name__ == "__main__":
     print(Solultion())
+
+# https://www.acmicpc.net/problem/16943
