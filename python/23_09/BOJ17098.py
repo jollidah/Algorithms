@@ -1,3 +1,5 @@
+# 세 친구
+
 import sys
 inp = sys.stdin.readline
 
@@ -31,3 +33,4 @@ def Solution(inp):
 if __name__ == "__main__":
     print(Solution(inp))
 
+# https://www.acmicpc.net/problem/17089
