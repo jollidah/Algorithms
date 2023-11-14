@@ -1,3 +1,5 @@
+# 로봇
+
 import sys
 import heapq
 # 이미 겹친 애 중에 1만큼 차이가 났다면, 이전에 겹친 애의 반대 방향만 탐색하면 된다.
@@ -59,3 +61,5 @@ def Solution():
     print(res)
 if __name__ == "__main__":
     Solution()
+
+# https://www.acmicpc.net/problem/1726
