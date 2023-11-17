@@ -35,10 +35,8 @@ def Solution():
     round = 0
     while res + 2 > round and q:
         round, y, x, d = heapq.heappop(q)
-    # print(round, y, x, d)
         if y == targetY and x == targetX:
             res = min(res, round + abs(targetDir - d))
-        # print("shit", round, y, x, d, targetDir)
         round += 1
         for k in (1, 2, 3):
             tmpY, tmpX = y + k * dt[d][0], x + k * dt[d][1]
