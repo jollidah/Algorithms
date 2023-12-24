@@ -1,3 +1,5 @@
+# 신입 사원
+
 import sys
 
 def Solution():
@@ -19,3 +21,5 @@ def Solution():
 
 if __name__ == "__main__":
     Solution()
+
+# https://www.acmicpc.net/problem/16197
